@@ -1,38 +1,486 @@
-.App {
-  text-align: center;
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html,
+body {
+	height: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+a {
+	text-decoration: none;
 }
 
-.App-link {
-  color: #61dafb;
+button {
+	border: none;
+	cursor: pointer;
+	font-family: inherit;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+body {
+	font-family: "Roboto", sans-serif;
+}
+/* Nav-sec*/
+
+.nav-bar {
+	width: 100%;
+	height: 30px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	background-color: rgb(18, 91, 80);
+	padding: 0 2rem;
+	color: aliceblue;
+	font-size: 1.5rem;
+}
+.nav-list {
+	display: none;
+}
+.welcome-sec {
+	width: 100vw;
+	height: calc(100vh - 30px);
+	background-image: url(https://images.unsplash.com/photo-1471646174523-327e108889e7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2072&q=80);
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+.welcome-sec div {
+	margin-left: 2rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	height: 40vh;
+	width: auto;
+}
+.welcome-sec h1 {
+	font-size: 2.5rem;
+	width: 75%;
+	color: aliceblue;
+}
+.welcome-sec p {
+	font-size: 2rem;
+	color: aliceblue;
+}
+.welcome-sec button {
+	width: 200px;
+	height: 50px;
+	background-color: transparent;
+	border: 3px solid white;
+	color: rgb(153, 253, 253);
+	padding: 1.5%;
+	font-size: 1.75rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.welcome-sec a {
+	width: fit-content;
+}
+
+/* Specialist section */
+
+.specialist-sec {
+	background-color: rgb(250, 245, 228);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 4rem 0;
+	position: relative;
+}
+.specialist-sec h1 {
+	font-size: 2.25rem;
+	margin-bottom: 2rem;
+}
+.spec-circle {
+	border-radius: 50%;
+	width: 200px;
+	height: 200px;
+	margin: 2rem 0;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.spec {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.spec-desc {
+	width: 80%;
+	text-align: left;
+}
+.spec-desc p {
+	text-align: justify;
+	font-size: 1.2rem;
+}
+.spec h3 {
+	font-weight: bold;
+	font-size: 1.5rem;
+	margin-bottom: 0.5rem;
+}
+
+/* Offer section*/
+
+.offer-sec {
+	background-color: rgb(246, 240, 206);
+	height: fit-content;
+	width: 100vw;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 4rem 0;
+}
+.offer-sec h2 {
+	font-size: 2rem;
+}
+.box {
+	width: 150px;
+	height: 150px;
+	margin: 4rem 0;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.box img {
+	width: 150px;
+	height: 150px;
+	z-index: 0;
+	position: relative;
+}
+.box div {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.box p {
+	font-size: 2.5rem;
+	font-weight: bold;
+	width: fit-content;
+	color: rgb(180, 36, 36);
+}
+.new {
+	position: absolute;
+	border-radius: 50%;
+	background-color: red;
+	width: 2.5rem;
+	height: 2.5rem;
+	top: -10px;
+	left: -10px;
+	z-index: 5;
+}
+
+.footer-sec {
+	background-color: rgb(18, 91, 80);
+	color: white;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	padding: 2%;
+	width: 100vw;
+	text-align: center;
+}
+.footer-sec p {
+	font-size: 1.5rem;
+}
+.icon-div {
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	align-items: center;
+	gap: 1.5rem;
+}
+.fa-brands {
+	font-size: 2rem;
+}
+
+@media screen and (min-width: 576px) {
+	.nav-bar {
+		height: 40px;
+	}
+	.nav-list {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		width: 25vw;
+		list-style: none;
+	}
+	.nav-list li a {
+		text-decoration: none;
+		color: white;
+	}
+	/* Welcome section*/
+
+	.welcome-sec {
+		height: calc(100vh - 40px);
+		width: 100%;
+	}
+	.welcome-sec div {
+		margin-left: 3rem;
+	}
+	.welcome-sec h1 {
+		font-size: 2.75rem;
+		width: 55%;
+	}
+	.welcome-sec p {
+		font-size: 2.25rem;
+		color: aliceblue;
+	}
+	.welcome-sec button {
+		font-size: 2rem;
+	}
+
+	/* Spec-sec */
+
+	.specialist-sec {
+		padding: 6rem 0;
+		flex-direction: column;
+		align-items: center;
+	}
+	.specialist-sec h1 {
+		font-size: 2.75rem;
+		margin-bottom: 3rem;
+	}
+	.spec h3 {
+		font-size: 1.5rem;
+		margin-bottom: 0.75rem;
+	}
+	.spec p {
+		font-size: 1.25rem;
+	}
+
+	/* Offer section*/
+
+	.offer-sec {
+		padding: 6rem 0;
+	}
+	.offer-sec h2 {
+		font-size: 2.75rem;
+		margin-bottom: 6rem;
+	}
+	.offer-sec-box {
+		display: flex;
+		flex-flow: row wrap;
+		align-items: center;
+		justify-content: center;
+		width: 60%;
+		gap: 4rem;
+	}
+	.box {
+		margin: 0;
+	}
+	.offer-sec h2 {
+		font-size: 3rem;
+	}
+
+	.fa-brands {
+		font-size: 2.75rem;
+	}
+}
+@media screen and (min-width: 776px) {
+	.nav-bar {
+		font-size: 1.75rem;
+		padding: 0 6rem;
+		height: 50px;
+	}
+	.nav-list {
+		max-width: 250px;
+	}
+	/* Welcome section*/
+	.welcome-sec {
+		height: calc(100vh - 50px);
+	}
+	.welcome-sec div {
+		margin-left: 6rem;
+	}
+	.welcome-sec h1 {
+		font-size: 3rem;
+		width: 55%;
+	}
+	.welcome-sec p {
+		font-size: 2.5rem;
+		color: aliceblue;
+	}
+	.welcome-sec button {
+		font-size: 2.25rem;
+	}
+
+	/* Spec-sec */
+
+	.specialist-sec {
+		padding: 6rem 0;
+		flex-direction: column;
+		align-items: center;
+	}
+	.specialist-sec h1 {
+		align-self: flex-start;
+		font-size: 3.25rem;
+		margin-bottom: 6rem;
+		margin-left: 6rem;
+	}
+	.spec {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.spec:nth-of-type(odd) {
+		flex-direction: row;
+		margin-right: 6.5rem;
+	}
+	.spec:nth-of-type(even) {
+		flex-direction: row-reverse;
+		margin-left: 6.5rem;
+	}
+	.spec-circle {
+		margin: 0 6rem;
+	}
+	.spec-desc {
+		width: 55%;
+	}
+	.spec p {
+		font-size: 1.5rem;
+		text-align: left;
+	}
+	.second p {
+		text-align: right;
+	}
+	.spec h3 {
+		font-size: 2rem;
+	}
+
+	/* Offer section*/
+
+	.offer-sec {
+		padding: 6rem 0;
+	}
+	.offer-sec h2 {
+		font-size: 3.25rem;
+		align-self: flex-start;
+		margin-left: 6rem;
+	}
+	.offer-sec-box {
+		width: 70%;
+	}
+
+	.footer-sec {
+		font-size: 1.75rem;
+	}
+}
+
+@media screen and (min-width: 996px) {
+	.nav-bar {
+		font-size: 1.75rem;
+		padding: 0 20rem;
+	}
+	.cursor-disable {
+		cursor: not-allowed;
+	}
+	/* Welcome section*/
+
+	.welcome-sec div {
+		padding: 0 15rem;
+	}
+	.welcome-sec h1 {
+		font-size: 3rem;
+		width: 55%;
+	}
+	.welcome-sec p {
+		font-size: 2.5rem;
+		color: aliceblue;
+	}
+	.welcome-sec button {
+		font-size: 2.25rem;
+		transition: 1s all ease-in-out;
+	}
+	.welcome-sec button:hover {
+		background-color: white;
+		color: black;
+	}
+
+	/* Spec-sec */
+
+	.specialist-sec {
+		padding: 6rem 0;
+		flex-direction: column;
+		align-items: center;
+	}
+	.specialist-sec h1 {
+		align-self: flex-start;
+		font-size: 3.25rem;
+		margin-bottom: 6rem;
+		padding-left: 15rem;
+	}
+	.spec {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+	}
+	.spec:nth-of-type(even) {
+		flex-direction: row-reverse;
+	}
+	.spec-circle {
+		margin: 0 6rem;
+	}
+	.spec-desc {
+		width: 55%;
+	}
+	.second {
+		text-align: right;
+	}
+	.spec h3 {
+		font-size: 2rem;
+	}
+	.spec p {
+		font-size: 1.5rem;
+	}
+
+	/* Offer section*/
+
+	.offer-sec {
+		padding: 6rem 0;
+		width: 100%;
+	}
+	.offer-sec h2 {
+		font-size: 3.25rem;
+		align-self: flex-start;
+		padding: 0 15rem;
+	}
+	.offer-sec-box {
+		max-width: 600px;
+	}
+	.box {
+		transition: all 0.5s ease-in-out;
+		z-index: 2;
+	}
+	.box:hover {
+		transform: scale(1.05);
+		border-radius: 15%;
+	}
+
+	.footer-sec {
+		font-size: 1.75rem;
+		width: 100%;
+	}
+	.fa-brands {
+		cursor: pointer;
+	}
 }
