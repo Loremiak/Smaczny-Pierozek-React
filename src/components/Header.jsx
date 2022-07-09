@@ -2,7 +2,7 @@ import React from "react";
 
 export const Header = () => {
 	return (
-		<section class="welcome-sec">
+		<section className="welcome-sec">
 			<div>
 				<h1>
 					Najsmaczniejsze pierogi w mieście! (niektórzy twierdzą że na świecie

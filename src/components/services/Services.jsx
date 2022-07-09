@@ -1,13 +1,13 @@
 import React from "react";
-import { oferty } from "../../data/oferta";
+import { offerts } from "../../data/offerts";
 import { Box } from "./Box";
 
 export const Services = () => {
 	return (
-		<section id="oferta" class="offer-sec">
+		<section id="oferta" className="offer-sec">
 			<h2>Czym zajada się nasza firma?</h2>
-			<div class="offer-sec-box">
-				{oferty.map((el, index) => (
+			<div className="offer-sec-box">
+				{offerts.map((el, index) => (
 					<Box key={index} {...el} />
 				))}
 			</div>
