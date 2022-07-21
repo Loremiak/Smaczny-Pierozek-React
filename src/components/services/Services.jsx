@@ -1,16 +1,16 @@
-import React from "react";
-import { offerts } from "../../data/offerts";
-import { Box } from "./Box";
+import React from 'react'
+import { Box } from './Box'
 
-export const Services = () => {
+export const Services = offers => {
+	const offersData = offers.offers
 	return (
-		<section id="oferta" className="offer-sec">
+		<section id='oferta' className='offer-sec'>
 			<h2>Czym zajada się nasza firma?</h2>
-			<div className="offer-sec-box">
-				{offerts.map((el, index) => (
+			<div className='offer-sec-box'>
+				{offersData.map((el, index) => (
 					<Box key={index} {...el} />
 				))}
 			</div>
 		</section>
-	);
-};
+	)
+}
