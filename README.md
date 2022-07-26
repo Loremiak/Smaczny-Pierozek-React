@@ -9,7 +9,7 @@ Project is created with:
 * React
 	
 ## Setup
-Live demo: <a href="incredible-squirrel-ec95ed.netlify.app//">incredible-squirrel-ec95ed.netlify.app/</a>
+Live demo: <a href="https://incredible-squirrel-ec95ed.netlify.app/">incredible-squirrel-ec95ed.netlify.app/</a>
 
 Or:
 
