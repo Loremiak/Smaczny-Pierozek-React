@@ -40,42 +40,45 @@ body {
 	justify-content: space-between;
 	background-color: rgb(18, 91, 80);
 	padding: 0 2rem;
-	color: aliceblue;
 	font-size: 1.5rem;
 }
 .nav-list {
 	display: none;
 }
 .welcome-sec {
-	width: 100vw;
+	width: auto;
 	height: calc(100vh - 30px);
-	background-image: url('https://images.unsplash.com/photo-1471646174523-327e108889e7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1600&q=80');
+	background-image: url('https://images.unsplash.com/photo-1471646174523-327e108889e7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=60');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
 }
-.welcome-sec div {
+.welcome-div {
 	margin-left: 2rem;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
 	height: 40vh;
 	width: auto;
+	background-color: rgba(0, 0, 0, 0.1);
 }
-.welcome-sec h1 {
+.welcome-div h1 {
 	font-size: 2.5rem;
 	width: 75%;
-	color: aliceblue;
+	color: w;
 }
-.welcome-sec p {
+.welcome-div p {
 	font-size: 2rem;
-	color: aliceblue;
+	color: rgb(27, 27, 27);
 }
 .welcome-sec button {
 	width: 200px;
 	height: 50px;
 	background-color: transparent;
-	border: 3px solid white;
+	border: 3px solid rgb(27, 27, 27);
 	color: rgb(153, 253, 253);
 	padding: 1.5%;
 	font-size: 1.75rem;
@@ -239,18 +242,17 @@ body {
 		height: calc(100vh - 40px);
 		width: 100%;
 	}
-	.welcome-sec div {
+	.welcome-div {
 		margin-left: 3rem;
 	}
-	.welcome-sec h1 {
+	.welcome-div h1 {
 		font-size: 2.75rem;
 		width: 55%;
 	}
-	.welcome-sec p {
+	.welcome-div p {
 		font-size: 2.25rem;
-		color: aliceblue;
 	}
-	.welcome-sec button {
+	.welcome-div button {
 		font-size: 2rem;
 	}
 
@@ -314,18 +316,17 @@ body {
 	.welcome-sec {
 		height: calc(100vh - 50px);
 	}
-	.welcome-sec div {
+	.welcome-div {
 		margin-left: 6rem;
 	}
-	.welcome-sec h1 {
+	.welcome-div h1 {
 		font-size: 3rem;
 		width: 55%;
 	}
-	.welcome-sec p {
+	.welcome-div p {
 		font-size: 2.5rem;
-		color: aliceblue;
 	}
-	.welcome-sec button {
+	.welcome-div button {
 		font-size: 2.25rem;
 	}
 
@@ -401,22 +402,21 @@ body {
 	}
 	/* Welcome section*/
 
-	.welcome-sec div {
+	.welcome-div {
 		padding: 0 15rem;
 	}
-	.welcome-sec h1 {
+	.welcome-div h1 {
 		font-size: 3rem;
 		width: 55%;
 	}
-	.welcome-sec p {
+	.welcome-div p {
 		font-size: 2.5rem;
-		color: aliceblue;
 	}
-	.welcome-sec button {
+	.welcome-div button {
 		font-size: 2.25rem;
 		transition: 1s all ease-in-out;
 	}
-	.welcome-sec button:hover {
+	.welcome-div button:hover {
 		background-color: white;
 		color: black;
 	}
